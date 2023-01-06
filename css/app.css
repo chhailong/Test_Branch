@@ -1,0 +1,72 @@
+html, body {
+
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: #0000ff;
+}
+
+/**
+ * Header styles
+ */
+header .logo {
+  float: left;
+}
+header .logo img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px ;
+}
+header nav {
+
+  float: right;
+}
+header nav .main-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+header nav .main-menu li {
+  padding: 15px;
+}
+header nav .main-menu li a {
+  color: #0000ff;
+  text-decoration: none;
+}
+header nav .main-menu li a:hover {
+  color: #c49104;
+}
+
+/**
+ * Banner style
+ */
+.banner {
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.row {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+}
+
+/**
+ * Responsive styles
+ */
+@media only screen and (min-width: 480px) {
+  .row {
+    flex-direction: row;
+  }
+  header nav .main-menu {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

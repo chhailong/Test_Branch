@@ -1,0 +1,79 @@
+@use "borders";
+@use "colors";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Header styles
+ */
+
+header {
+    .logo {
+        float: left;
+
+        img {
+            @include borders.border-radius(5px);
+        }
+    }
+
+    nav {
+        float: right;
+
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+
+            li {
+                padding: 15px;
+
+                a {
+                    color: colors.$color-primary;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: colors.$color-second;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Banner style
+ */
+.banner {
+    width: 100%;
+
+    img {
+        width: 100%;
+        @include borders.border-radius(15px);
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+/**
+ * Responsive styles
+ */
+
+ @media only screen and (min-width: 480px) {
+	.row {
+        flex-direction: row;
+    }
+
+    header {
+        nav {
+            .main-menu {
+                flex-direction: row;
+            }
+        }
+    }
+}
